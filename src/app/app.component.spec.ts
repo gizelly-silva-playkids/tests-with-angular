@@ -29,4 +29,13 @@ describe(AppComponent.name, () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Counter likes');
   });
+
+  it(`should be increase likes when #${AppComponent.prototype.like.name} function called`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.like();
+    fixture.detectChanges();
+
+    expect(app.likes).toBe(1);
+  });
 });
