@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LikeComponent } from './shared/components/like/like.component';
+import { LikeModule } from './shared/components/like/like.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LikeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LikeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
