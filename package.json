@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:common": "ng test --browsers Chrome,Firefox,Safari",
-    "test:common:headless": "ng test --watch=false --browsers ChromeHeadless,FirefoxHeadless,FirefoxHeadlessCustom"
+    "test:common:headless": "ng test --watch=false --reporters junit --browsers ChromeHeadless,FirefoxHeadless,FirefoxHeadlessCustom"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +42,7 @@
     "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "karma-junit-reporter": "^2.0.1",
     "karma-safari-launcher": "^1.0.0",
     "typescript": "~4.3.5"
   }
